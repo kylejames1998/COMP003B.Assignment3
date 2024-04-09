@@ -81,8 +81,9 @@ namespace COMP003B.Assignment3.Controllers
                     existingProduct.Price = product.Price;
                 }
 
-                return View(product);
+                return RedirectToAction(nameof(Index));
             }
+            return View(product);
         }
 
         // GET: ProductController/Delete/5
@@ -105,7 +106,7 @@ namespace COMP003B.Assignment3.Controllers
         }
 
         // POST: ProductController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
