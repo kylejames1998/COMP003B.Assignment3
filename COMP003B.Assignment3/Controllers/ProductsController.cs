@@ -8,21 +8,21 @@ namespace COMP003B.Assignment3.Controllers
     {
         private static List<Product> _products = new List<Product>();
 
-        // GET: ProductController
+        // GET: Products
         public ActionResult Index()
         {
             return View(_products);
         }
 
 
-        // GET: ProductController/Create
+        // GET: Products/Create
         [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ProductController/Create
+        // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Product product)
@@ -44,7 +44,7 @@ namespace COMP003B.Assignment3.Controllers
           return View();
         }
 
-        // GET: ProductController/Edit/5
+        // GET: Products/Edit/5
         [HttpGet]
         public ActionResult Edit(int? id)
         {
@@ -67,7 +67,7 @@ namespace COMP003B.Assignment3.Controllers
             return View(product);
         }
 
-        // POST: ProductController/Edit/5
+        // POST: Products/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, Product product)
@@ -98,7 +98,7 @@ namespace COMP003B.Assignment3.Controllers
             return View(product);
         }
 
-        // GET: ProductController/Delete/5
+        // GET: Products/Delete/5
         [HttpGet]
         public ActionResult Delete(int? id)
         {
@@ -121,7 +121,7 @@ namespace COMP003B.Assignment3.Controllers
             return View(product);
         }
 
-        // POST: ProductController/Delete/5
+        // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
