@@ -26,6 +26,7 @@ namespace COMP003B.Assignment3
 
             app.UseAuthorization();
 
+            // Changed the default route to the Products controller
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Products}/{action=Index}/{id?}");
